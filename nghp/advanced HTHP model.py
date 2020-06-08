@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 
-Simple heat pump model with CoolProp (low-level interface). 
+Heat pump model with CoolProp (low-level interface). 
 
 Suitable both for subcritical or supercritical cycles, with single substances or zeotropic mixtures.
 
-Ther thermodynamic properties are called via CoolProp and the property plots are generated with the dedicated CoolProp functions
+The thermodynamic properties are called via CoolProp and the property plots are generated with the dedicated CoolProp functions
 
 Cycles conditions are imposed and the secondary fluid temperature profiles are recalculated.
 
@@ -243,6 +243,14 @@ with NoStdStreams():
     pp.draw_process(states_cf,line_opts={'color':'blue', 'linestyle':'dashed'})
 
 def draw_ts():
+    '''
+    simplified isolines for mixtures in which the calc_isolines() function does not work
+
+    Returns
+    -------
+    None.
+
+    '''
     states_sat = StateContainer()
     N = 100
     sat_l = CP.AbstractState(library, fluid)
