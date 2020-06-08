@@ -16,5 +16,5 @@ Run the file "simple HTHP model.py"
 
 Example result
 --------------
-
+![R1336mzz(Z)](/docs/figures/r1336mzz-transcritical.png)
 
